@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
-        IMAGE_NAME = 'your-dockerhub-username/my-react-app'
+        IMAGE_NAME = 'vivek2707/my-react-app'
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+                    url: url: 'https://github.com/Cali-ver/ujjwala-mithala.git'
             }
         }
 
