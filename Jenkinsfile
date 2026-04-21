@@ -11,7 +11,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git branch: 'main',
-                    url: url: 'https://github.com/Cali-ver/ujjwala-mithala.git'
+                    url: 'https://github.com/Cali-ver/ujjwala-mithala.git'
             }
         }
 
