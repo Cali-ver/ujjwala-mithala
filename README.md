@@ -45,6 +45,9 @@ export default defineConfig([
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
+## Testing CI/CD Pipeline
+This is a test commit to verify the pipeline works.
+
 ```js
 // eslint.config.js
 import reactX from 'eslint-plugin-react-x'
