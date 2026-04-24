@@ -7,6 +7,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Gallery = lazy(() => import('./pages/Gallery'));
 const Shop = lazy(() => import('./pages/Shop'));
 const Artists = lazy(() => import('./pages/Artists'));
+const Auth = lazy(() => import('./pages/Auth'));
 
 const LoadingFallback = () => (
   <div className="h-screen w-full flex items-center justify-center bg-heritage-cream">
@@ -36,6 +37,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/artists" element={<Artists />} />
+            <Route path="/login" element={<Auth />} />
             <Route path="/heritage" element={<Home />} /> {/* Placeholder */}
             <Route path="*" element={<NotFound />} />
           </Routes>

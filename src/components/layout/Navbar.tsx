@@ -56,9 +56,9 @@ const Navbar: React.FC = () => {
           <button className="hidden sm:block opacity-70 hover:opacity-100 transition-opacity">
             <Search size={20} />
           </button>
-          <button className="opacity-70 hover:opacity-100 transition-opacity">
+          <Link to="/login" className="opacity-70 hover:opacity-100 transition-opacity">
             <User size={20} />
-          </button>
+          </Link>
           <button 
             onClick={() => setIsCartOpen(true)}
             className="relative opacity-70 hover:opacity-100 transition-opacity"
