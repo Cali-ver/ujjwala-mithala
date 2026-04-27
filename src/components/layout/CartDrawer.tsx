@@ -1,10 +1,12 @@
 import React from 'react';
 import { X, Trash2, ShoppingBag } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const CartDrawer: React.FC = () => {
   const { cart, removeFromCart, isCartOpen, setIsCartOpen, totalPrice } = useAppContext();
+  const navigate = useNavigate();
 
   return (
     <AnimatePresence>
@@ -80,7 +82,13 @@ const CartDrawer: React.FC = () => {
                   <span>₹{totalPrice.toLocaleString()}</span>
                 </div>
                 <p className="text-xs opacity-60 text-center">Shipping and taxes calculated at checkout</p>
-                <button className="w-full btn-primary py-4 text-lg">
+                <button 
+                  onClick={() => {
+                    setIsCartOpen(false);
+                    navigate('/checkout');
+                  }}
+                  className="w-full btn-primary py-4 text-lg"
+                >
                   Checkout
                 </button>
               </div>
