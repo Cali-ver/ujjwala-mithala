@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { User, Mail, ShoppingBag, Calendar, Package, LogOut, Settings, ChevronRight, CreditCard } from 'lucide-react';
+import { User, Mail, ShoppingBag, Calendar, Package, LogOut, Settings, ChevronRight, } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import { getProfile } from '../services/authService';
