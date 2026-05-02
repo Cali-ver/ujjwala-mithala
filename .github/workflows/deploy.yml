@@ -20,7 +20,9 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t vivek2707/my-react-app:${{ github.run_number }} .
+          docker build \
+            --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} \
+            -t vivek2707/my-react-app:${{ github.run_number }} .
           docker tag vivek2707/my-react-app:${{ github.run_number }} vivek2707/my-react-app:latest
 
       - name: Push Docker Image
